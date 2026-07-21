@@ -84,10 +84,10 @@ export default function AboutUs() {
                 alt="" 
                 className="absolute pointer-events-none object-contain"
                 style={{
-                  width: '82.37px',
-                  height: '14.33px',
-                  bottom: '-4px',
-                  left: '0px'  
+                  width: '100px',
+                  height: '16px',
+                  bottom: '-6px',
+                  left: '-3px'  
                 }}
               />
             </span>
@@ -97,11 +97,10 @@ export default function AboutUs() {
 
       {/* 4. Lower Content Container (Our Story Text Box + Right Image Box) */}
       <div 
-        className="absolute z-20"
+        className="absolute flex items-center justify-between z-20"
         style={{
           width: '1172px',
           height: '405px',
-          // UPDATED: Shifted up from 502px to 420px to move the whole layout higher up
           top: '420px',         
           left: '188px'
         }}
@@ -109,12 +108,9 @@ export default function AboutUs() {
         
         {/* Left Side: Our Story Typography Frame */}
         <div 
-          className="absolute flex flex-col text-white"
+          className="flex flex-col text-white"
           style={{
             width: '522px',
-            height: '189px',
-            top: '40px', // Adjusted local top spacing inside the wrapper box
-            left: '0px',
             gap: '16px'
           }}
         >
@@ -140,25 +136,23 @@ export default function AboutUs() {
             </h3>
           </div>
 
-          {/* Core Sub-Description Paragraph -> UPDATED: Extraneous line breaks removed */}
+          {/* Core Sub-Description Paragraph */}
           <p 
             className="text-[16px] font-normal leading-[140%] text-[#E0E0E0]"
-            style={{ width: '522px', fontFamily: 'Nunito, sans-serif' }}
+            style={{ width: '522px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
           >
-            After leading HR and product teams in high-growth companies, we saw the same problems over and over: messy processes, siloed communication, and tools that created more noise than clarity. Tulip was born out of the belief that hiring is both a science and an art, and that technology should support human judgment, not replace it. We're building the platform we always wanted: one that's simple, powerful, and designed to make great hiring easier.
+            After leading HR and product teams in high-growth companies, we<br />
+            saw the same problems over and over: messy processes, siloed<br />
+            communication, and tools that created more noise than clarity.<br />
+            Tulip was born out of the belief that hiring is both a science and an art,<br />
+            and that technology should support human judgment, not replace it.<br />
+            We're building the platform we always wanted: one that's simple,<br />
+            powerful, and designed to make great hiring easier.
           </p>
         </div>
 
         {/* Right Side: Showcase Photo Grid Image Frame Layer */}
-        <div 
-          className="absolute"
-          style={{
-            width: '630px',
-            height: '405px',
-            top: '0px',
-            left: '542px'       
-          }}
-        >
+        <div style={{ width: '630px', height: '405px' }}>
           <img 
             src="/images/about-showcase-grid.svg" 
             alt="Tulip Team Story Showcase" 

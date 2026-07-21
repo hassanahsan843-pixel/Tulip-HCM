@@ -78,7 +78,7 @@ export default function Different() {
           {/* Sub-Description Text Paragraph -> UPDATED: font-semibold changed to font-normal */}
           <p 
             className="text-[16px] font-normal leading-[120%]"
-            style={{ width: '522px', height: '76px', fontFamily: 'Nunito, sans-serif' }}
+            style={{ width: '522px', height: '76px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
           >
             Tulip blends AI and human intelligence to streamline the hiring process, without sacrificing clarity or control. From job creation to final offer, we help teams move faster, make better decisions, and stay aligned along the way.
           </p>

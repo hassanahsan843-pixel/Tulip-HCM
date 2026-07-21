@@ -22,18 +22,34 @@ export default function HowItWorks() {
           className="relative flex flex-col items-center"
           style={{ width: '1104px', height: '292px', gap: '24px' }}
         >
-          {/* How It Works Badge Pill */}
-          <div 
-            className="flex items-center justify-center font-medium text-xs text-[#9B7AF5]"
+          {/* How It Works Badge Pill — exact Figma spec */}
+          <div
             style={{
               width: '132px',
               height: '32px',
               borderRadius: '80px',
               border: '1px solid #9B7AF5',
-              backgroundColor: 'rgba(155, 122, 245, 0.12)' // #9B7AF51F
+              backgroundColor: '#9B7AF51F',
+              padding: '8px 16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
             }}
           >
-            How It Works
+            <span
+              style={{
+                fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif',
+                fontWeight: 500,
+                fontSize: '16px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#9B7AF5',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              How It Works
+            </span>
           </div>
 
           {/* Headline Content Wrapper */}
@@ -70,55 +86,55 @@ export default function HowItWorks() {
             style={{ height: '140px', gap: '24px' }}
           >
             {/* Step 1 Box Component */}
-            <div className="flex items-start" style={{ width: '352px', height: '140px', gap: '20px' }}>
+            <div className="flex items-center" style={{ width: '352px', height: '140px', gap: '20px' }}>
               <img 
                 src="/images/step-number-1.svg" 
                 alt="1" 
                 className="object-contain flex-shrink-0" 
-                style={{ width: '61px', height: '140px' }} 
+                style={{ width: '58px', height: '104px' }} 
               />
               <div className="flex flex-col justify-center" style={{ width: '271px' }}>
                 <h3 className="text-[20px] font-semibold text-[#29282A] mb-2 leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
-                  Create Roles with Clarity and Context
+                  Create Roles with Clarity<br />and Context
                 </h3>
-                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-                  Our AI-enhanced customizable templates help define roles with real substance cutting down on revisions and rework later.
+                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+                  Our AI-enhanced customizable<br />templates help define roles with real<br />substance cutting down on revisions<br />and rework later.
                 </p>
               </div>
             </div>
 
             {/* Step 2 Box Component */}
-            <div className="flex items-start" style={{ width: '352px', height: '140px', gap: '20px' }}>
+            <div className="flex items-center" style={{ width: '352px', height: '140px', gap: '20px' }}>
               <img 
                 src="/images/step-number-2.svg" 
                 alt="2" 
                 className="object-contain flex-shrink-0" 
-                style={{ width: '87px', height: '140px' }} 
+                style={{ width: '76px', height: '128px' }} 
               />
               <div className="flex flex-col justify-center" style={{ width: '245px' }}>
                 <h3 className="text-[20px] font-semibold text-[#29282A] mb-2 leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
-                  Run Interviews That Flow Naturally
+                  Run Interviews That Flow<br />Naturally
                 </h3>
-                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-                  Tulip builds structured interview plans and intelligently nudges your team to keep the process moving.
+                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+                  Tulip builds structured interview<br />plans and intelligently nudges<br />your team to keep the process<br />moving.
                 </p>
               </div>
             </div>
 
             {/* Step 3 Box Component */}
-            <div className="flex items-start" style={{ width: '352px', height: '140px', gap: '20px' }}>
+            <div className="flex items-center" style={{ width: '352px', height: '140px', gap: '20px' }}>
               <img 
                 src="/images/step-number-3.svg" 
                 alt="3" 
                 className="object-contain flex-shrink-0" 
-                style={{ width: '87px', height: '140px' }} 
+                style={{ width: '76px', height: '128px' }} 
               />
               <div className="flex flex-col justify-center" style={{ width: '245px' }}>
                 <h3 className="text-[20px] font-semibold text-[#29282A] mb-2 leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
-                  Make Decisions with Confidence
+                  Make Decisions with<br />Confidence
                 </h3>
-                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-                  Candidate feedback is organized, structured, and summarized so you can trust your signals, not your gut alone.
+                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+                  Candidate feedback is organized,<br />structured, and summarized so<br />you can trust your signals, not<br />your gut alone.
                 </p>
               </div>
             </div>
@@ -159,7 +175,7 @@ export default function HowItWorks() {
 
             <p 
               className="text-[16px] font-normal text-[#555358] leading-[140%]"
-              style={{ width: '522px', fontFamily: 'Nunito, sans-serif' }}
+              style={{ width: '522px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
             >
               Technology helps you move fast. Human judgment ensures you get it right. Tulip brings both together in one clean, powerful platform.
             </p>

@@ -8,19 +8,18 @@ export default function FooterSection() {
 
   return (
     // Outer section wrapper handling the final layout area
-    <section className="relative w-[1440px] bg-transparent mx-auto mt-[120px]" style={{ height: '1050px' }}>
+    <section className="relative w-[1440px] bg-transparent mx-auto mt-[120px]" style={{ height: '1050px', overflow: 'visible' }}>
       
-      {/* 1. Large Coral Ellipse at bottom left of the whole page */}
+      {/* 1. Left Edge Coral Arc — SVG is pre-cropped to 277×735, arc already at left edge */}
       <img 
         src="/images/footer-left-ellipse.svg" 
         alt="" 
-        className="absolute pointer-events-none z-0 object-contain"
+        className="absolute pointer-events-none z-0"
         style={{
-          width: '922px',
-          height: '922px',
-          top: '429px',          
-          left: '-645px',
-          opacity: 0.06
+          width: '277px',   // exact SVG natural width — arc fills this space
+          height: '735px',  // exact SVG natural height
+          top: '410px',     // vertically centers the 735px arc on the form card (558+150-735/2)
+          left: '0px',      // flush left — circle center at cx=-184 inside SVG handles the bleed
         }}
       />
 
@@ -54,7 +53,21 @@ export default function FooterSection() {
           className="text-[40px] font-medium text-[#29282A] text-center"
           style={{ width: '1104px', height: '40px', lineHeight: '100%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
         >
-          Our 5 Principles of Core Value
+          Our 5 <span className="relative inline-block">
+            Principles
+            {/* Accent SVG Space: Beneath 'Principles', from 'r' to 'p' */}
+            <img 
+              src="/images/Principlevector.svg" 
+              alt="" 
+              className="absolute pointer-events-none object-contain"
+              style={{
+                width: '90px',
+                height: '16px',
+                bottom: '-14px',
+                left: '31px'
+              }}
+            />
+          </span> of Core Value
         </h2>
       </div>
 
@@ -73,8 +86,9 @@ export default function FooterSection() {
         <div className="flex flex-col flex-1 h-[153px]" style={{ gap: '16px' }}>
           <img src="/images/value-icon-human.svg" alt="" className="w-[59px] h-[40px] object-contain self-start" />
           <h3 className="text-[20px] font-semibold text-[#29282A]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>Human-first</h3>
-          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-            We prioritize real people, not just data points, in every product decision.
+          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+            We prioritize real people, not just data<br />
+            points, in every product decision.
           </p>
         </div>
 
@@ -82,8 +96,9 @@ export default function FooterSection() {
         <div className="flex flex-col flex-1 h-[153px]" style={{ gap: '16px' }}>
           <img src="/images/value-icon-speed.svg" alt="" className="w-[22px] h-[40px] object-contain self-start" />
           <h3 className="text-[20px] font-semibold text-[#29282A]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>Speed with purpose</h3>
-          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-            Tulip helps teams move quickly, while staying aligned and intentional.
+          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+            Tulip helps teams move quickly, while<br />
+            staying aligned and intentional.
           </p>
         </div>
 
@@ -91,8 +106,9 @@ export default function FooterSection() {
         <div className="flex flex-col flex-1 h-[153px]" style={{ gap: '16px' }}>
           <img src="/images/value-icon-simplicity.svg" alt="" className="w-[25px] h-[40px] object-contain self-start" />
           <h3 className="text-[20px] font-semibold text-[#29282A]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>Simplicity that scales</h3>
-          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-            We build tools that feel light and intuitive, even as your organization grows.
+          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+            We build tools that feel light and intuitive,<br />
+            even as your organization grows.
           </p>
         </div>
       </div>
@@ -112,8 +128,9 @@ export default function FooterSection() {
         <div className="flex flex-col style-grid" style={{ width: '512px', height: '134px', gap: '16px' }}>
           <img src="/images/value-icon-bias.svg" alt="" className="w-[50px] h-[40px] object-contain self-start" />
           <h3 className="text-[20px] font-semibold text-[#29282A]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>Bias-aware by design</h3>
-          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ width: '512px', fontFamily: 'Nunito, sans-serif' }}>
-            Structured, inclusive processes aren't a feature, they're our foundation.
+          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ width: '512px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+            Structured, inclusive processes aren't a feature, they're our<br />
+            foundation.
           </p>
         </div>
 
@@ -121,8 +138,9 @@ export default function FooterSection() {
         <div className="flex flex-col style-grid" style={{ width: '512px', height: '134px', gap: '16px' }}>
           <img src="/images/value-icon-partnership.svg" alt="" className="w-[43px] h-[40px] object-contain self-start" />
           <h3 className="text-[20px] font-semibold text-[#29282A]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>Built in partnership</h3>
-          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ width: '512px', fontFamily: 'Nunito, sans-serif' }}>
-            We shape our roadmap through direct conversations with the teams who use Tulip every day.
+          <p className="text-[16px] font-normal text-[#555358] leading-[120%]" style={{ width: '512px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+            We shape our roadmap through direct conversations with the teams<br />
+            who use Tulip every day.
           </p>
         </div>
       </div>
@@ -151,8 +169,11 @@ export default function FooterSection() {
           <h3 className="text-[32px] font-medium text-white leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
             We're building something different. Want in?
           </h3>
-          <p className="text-[14px] font-normal text-white leading-[140%]" style={{ fontFamily: 'Nunito, sans-serif' }}>
-            Tulip is currently in early access with a small group of forward-thinking teams. If you're ready to rethink hiring — with speed, clarity, and humanity — we'd love to hear from you.
+          <p className="text-[14px] font-normal text-white leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+            Tulip is currently in early access with a small group<br />
+            of forward-thinking teams. If you're ready to rethink<br />
+            hiring — with speed, clarity, and humanity — we'd<br />
+            love to hear from you.
           </p>
         </div>
 

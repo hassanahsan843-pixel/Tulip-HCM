@@ -27,10 +27,10 @@ export default function Hero() {
             alt="" 
             className="absolute pointer-events-none z-20 object-contain"
             style={{
-              width: '35.12px',
-              height: '28.13px',
-              top: '-15px',
-              left: '530px',
+              width: '50px',
+              height: '40px',
+              top: '-10px',
+              left: '517px',
               transform: 'rotate(-360deg)'
             }}
           />
@@ -47,29 +47,27 @@ export default function Hero() {
     alt="" 
     className="absolute pointer-events-none z-10 object-contain max-w-none" 
     style={{
-      bottom: '-6px',       // Increase (e.g., '-10px') to move it lower, decrease to pull it closer to the text
-      
-      left: '50%',          // Centers the vector relative to the word
-      transform: 'translateX(-50%)', // Keeps it perfectly centered while scaling
-      
-      width: '110%',        // Make it slightly wider than the text so the edges don't clip the 'C' or 'r'
-      height: 'auto'
+      top: '50%',
+      left: '44%', // Shifted left from 50%
+      transform: 'translate(-50%, -50%)',
+      width: '125%',
+      height: '160%'
     }}
   />
 </span>{" "}
             <span className="font-bold relative inline-block">
               & Customizable.
               
-              {/* Bottom Accent SVG Shape (Under 'm' through 'l/e' in Customizable) */}
+              {/* Bottom Accent SVG Shape (Under '& Customizable') */}
               <img 
                 src="/images/customizable-bottom-accent.svg" 
                 alt="" 
                 className="absolute pointer-events-none z-20 object-contain"
                 style={{
-                  width: '149px',
-                  height: '16px',
-                  bottom: '0px',
-                  left: '230px',
+                  width: '220px',
+                  height: '20px',
+                  bottom: '-4px',
+                  left: '210px',
                   transform: 'rotate(-360deg)'
                 }}
               />
@@ -79,10 +77,12 @@ export default function Hero() {
 
         {/* Subtitle Paragraph */}
         <p 
-          className="text-[16px] font-semibold text-[#555358] w-full" 
-          style={{ lineHeight: '120%', fontFamily: 'Nunito, sans-serif' }}
+          className="text-[16px] font-normal text-[#555358] w-full" 
+          style={{ lineHeight: '120%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif', letterSpacing: '0%' }}
         >
-          Tulip is a next-generation applicant tracking system that combines the power of AI with the judgment of experienced teams. Built for speed and designed with empathy, Tulip helps you hire better, without over engineering the process.
+          Tulip is a next-generation applicant tracking system that combines the power of AI<br />
+          with the judgment of experienced teams. Built for speed and designed with empathy,<br />
+          Tulip helps you hire better, without over engineering the process.
         </p>
 
         {/* Three Points Box (Height: 81px, built with tight flex gaps) */}
@@ -107,14 +107,24 @@ export default function Hero() {
         {/* Action Buttons Container */}
         <div className="flex items-center gap-[12px]">
           {/* Get Early Access Button */}
-          <button className="w-[159px] h-[32px] bg-[#3B82F6] text-white rounded-[40px] text-xs font-semibold flex items-center justify-center transition-all hover:bg-blue-600">
+          <button className="w-[159px] h-[32px] text-white rounded-[40px] text-xs font-semibold flex items-center justify-center transition-all" style={{ backgroundColor: '#47A3FF' }} onMouseOver={e => (e.currentTarget.style.backgroundColor='#2e8fe8')} onMouseOut={e => (e.currentTarget.style.backgroundColor='#47A3FF')}>
             Get Early Access
           </button>
 
           {/* Join Waitlist Button */}
           <button 
-            className="w-[121px] h-[32px] rounded-[40px] text-xs font-semibold flex items-center justify-center transition-all bg-white hover:bg-slate-50"
-            style={{ border: '2px solid #47A3FF', color: '#29282A' }}
+            className="w-[121px] h-[32px] rounded-[40px] text-xs font-semibold flex items-center justify-center transition-all"
+            style={{ border: '2px solid #47A3FF', color: '#29282A', backgroundColor: 'white' }}
+            onMouseEnter={e => {
+              e.currentTarget.style.backgroundColor = '#47A3FF';
+              e.currentTarget.style.color = 'white';
+              e.currentTarget.style.borderColor = '#47A3FF';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.backgroundColor = 'white';
+              e.currentTarget.style.color = '#29282A';
+              e.currentTarget.style.borderColor = '#47A3FF';
+            }}
           >
             Join Waitlist
           </button>
