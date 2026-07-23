@@ -21,4 +21,16 @@ a {
 /* Ensure body text never inherits an unexpected colour */
 body {
   color: #29282A;
+}
+
+/* Ensure margins and paddings match across production builds */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
