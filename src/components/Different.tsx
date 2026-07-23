@@ -2,24 +2,20 @@ import React from 'react';
 
 export default function Different() {
   return (
-    // The wrapper container is completely transparent 
     <section 
-      className="relative w-[1440px] bg-transparent mx-auto overflow-hidden mt-[120px]"
-      style={{ height: '718px' }}
+      className="relative w-full max-w-[1440px] bg-transparent flex flex-col mx-auto overflow-hidden mt-20 lg:mt-[120px]"
+      style={{ minHeight: '718px' }}
     >
-      
-      {/* Custom curved Figma background SVG */}
       <img 
         src="/images/different-bg-shape.svg" 
         alt="" 
-        className="absolute top-0 left-0 w-full h-full object-fill z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
       />
 
-      {/* White Soft Gradient Ellipse layer floating cleanly over the background layer */}
       <img 
         src="/images/different-left-ellipse.svg" 
         alt="" 
-        className="absolute pointer-events-none z-10 object-contain"
+        className="absolute pointer-events-none z-10 object-contain hidden lg:block"
         style={{
           width: '922px',
           height: '922px',
@@ -29,71 +25,44 @@ export default function Different() {
         }}
       />
 
-      {/* Inner Grid Box Content Frame (Pushed to z-20 to stay on top and fully clickable) */}
       <div 
-        className="absolute z-20"
-        style={{
-          width: '1172px',
-          height: '464px',
-          top: '127px',         
-          left: '188px'
-        }}
+        className="relative z-20 flex flex-col lg:flex-row justify-between items-center flex-shrink-0 w-full lg:w-[1172px] mt-16 lg:mt-[127px] ml-0 lg:ml-[188px] px-6 lg:px-0 gap-12 lg:gap-0 mx-auto lg:mx-0"
       >
-        
-        {/* Left Hand: Typography Text Box Frame */}
         <div 
-          className="absolute flex flex-col text-white"
-          style={{
-            width: '522px',
-            height: '140px',
-            top: '162px',       
-            left: '0px',
-            gap: '16px'
-          }}
+          className="relative flex flex-col text-white flex-shrink-0 w-full lg:w-[522px] text-center lg:text-left items-center lg:items-start"
+          style={{ gap: '16px' }}
         >
           {/* Main Headline with Highlight Vector Space under 'Different' */}
           <h2 
-            className="text-[40px] font-medium leading-[120%]"
-            style={{ width: '522px', height: '48px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
+            className="text-[32px] lg:text-[40px] font-medium leading-[120%] w-full lg:w-[522px]"
+            style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
           >
             What Makes Tulip{" "}
             <span className="font-semibold relative inline-block">
               Different
-              
-              {/* NEW: Vector accent graphic placed directly beneath the word 'Different' */}
               <img 
                 src="/images/different-bottom-accent.svg" 
                 alt="" 
                 className="absolute pointer-events-none z-30 object-contain max-w-none"
                 style={{
-                  width: '50%',        // Spans the full length of the word
+                  width: '50%',
                   height: 'auto',
-                  bottom: '-8px',       // Pulls it just beneath the letters
+                  bottom: '-8px',
                   left: '48px'
                 }}
               />
             </span>
           </h2>
 
-          {/* Sub-Description Text Paragraph -> UPDATED: font-semibold changed to font-normal */}
           <p 
-            className="text-[16px] font-normal leading-[120%]"
-            style={{ width: '522px', height: '76px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
+            className="text-[16px] font-normal leading-[120%] w-full lg:w-[522px]"
+            style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
           >
             Tulip blends AI and human intelligence to streamline the hiring process, without sacrificing clarity or control. From job creation to final offer, we help teams move faster, make better decisions, and stay aligned along the way.
           </p>
         </div>
 
-        {/* Right Hand: Embedded Illustration Image Asset Box */}
-        <div 
-          className="absolute"
-          style={{
-            width: '590px',
-            height: '464px',
-            top: '0px',
-            left: '582px'       
-          }}
-        >
+        <div className="relative flex-shrink-0 w-full max-w-[590px] lg:w-[590px] h-auto lg:h-[464px] pb-12 lg:pb-0">
           <img 
             src="/images/different-showcase-group.svg" 
             alt="What Makes Tulip Different Illustration" 

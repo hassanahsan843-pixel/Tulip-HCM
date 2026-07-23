@@ -2,45 +2,33 @@ import React from 'react';
 
 export default function AboutUs() {
   return (
-    // The master section viewport container maps to the exact 1440px page layout flow
     <section 
-      className="relative w-[1440px] bg-transparent mx-auto overflow-hidden mt-[120px]"
-      style={{ height: '1020px' }} // Locked to the true Figma layer group canvas height
+      className="relative w-full max-w-[1440px] bg-transparent flex flex-col mx-auto overflow-hidden mt-20 lg:mt-[120px] px-6 lg:px-0"
+      style={{ minHeight: '1020px' }}
     >
-      
-      {/* Custom Curved Dark Background SVG Asset */}
       <img 
         src="/images/about-bg-shape.svg" 
         alt="" 
-        className="absolute top-0 left-0 w-full h-full object-fill z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
       />
 
-      {/* White Translucent Soft Gradient Ellipse at the right edge behind images */}
       <img 
         src="/images/about-right-ellipse.svg" 
         alt="" 
-        className="absolute pointer-events-none z-10 object-contain"
+        className="absolute pointer-events-none z-10 object-contain hidden lg:block"
         style={{
           width: '922px',
           height: '922px',
           top: '330px',          
-          left: '1152px',        
+          right: '-434px',
           opacity: 0.06
         }}
       />
 
-      {/* Upper Heading Box Box */}
       <div 
-        className="absolute flex flex-col items-center z-20"
-        style={{
-          width: '846px',
-          height: '168px',
-          top: '162px',         
-          left: '297px',        
-          gap: '40px'
-        }}
+        className="relative flex flex-col items-center z-20 self-center flex-shrink-0 w-full lg:w-[846px] mt-12 lg:mt-[162px]"
+        style={{ gap: '40px' }}
       >
-        {/* About Us Badge Pill */}
         <div 
           className="flex items-center justify-center font-medium text-xs text-[#E0E0E0]"
           style={{
@@ -54,14 +42,11 @@ export default function AboutUs() {
           About Us
         </div>
 
-        {/* Main Header Headline Content */}
         <div className="relative w-full text-center">
-          
-          {/* Vector Accent Space: Directly at top-right of the word 'System' */}
           <img 
             src="/images/system-top-accent.svg" 
             alt="" 
-            className="absolute pointer-events-none object-contain"
+            className="absolute pointer-events-none object-contain hidden lg:block"
             style={{
               width: '28.41px',
               height: '24px',
@@ -71,14 +56,12 @@ export default function AboutUs() {
           />
 
           <h2 
-            className="text-[40px] font-medium text-white tracking-normal"
-            style={{ width: '846px', height: '96px', lineHeight: '120%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
+            className="text-[32px] lg:text-[40px] font-medium text-white tracking-normal w-full lg:w-[846px] h-auto lg:h-[96px] mx-auto"
+            style={{ lineHeight: '120%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
           >
-            We <span className="font-semibold">Built</span> The System We Always <br />
+            We <span className="font-semibold">Built</span> The System We Always <br className="hidden lg:block" />
             <span className="relative inline-block">
               Wished We Had.
-              
-              {/* Vector Accent Space: Directly beneath the word 'Wished' */}
               <img 
                 src="/images/wished-bottom-accent.svg" 
                 alt="" 
@@ -94,38 +77,23 @@ export default function AboutUs() {
           </h2>
         </div>
       </div>
-
-      {/* 4. Lower Content Container (Our Story Text Box + Right Image Box) */}
       <div 
-        className="absolute flex items-center justify-between z-20"
-        style={{
-          width: '1172px',
-          height: '405px',
-          top: '420px',         
-          left: '188px'
-        }}
+        className="relative flex flex-col lg:flex-row items-center justify-between z-20 flex-shrink-0 w-full lg:w-[1172px] mt-16 lg:mt-[90px] ml-0 lg:ml-[188px] gap-12 lg:gap-0 mx-auto lg:mx-0"
       >
-        
-        {/* Left Side: Our Story Typography Frame */}
         <div 
-          className="flex flex-col text-white"
-          style={{
-            width: '522px',
-            gap: '16px'
-          }}
+          className="flex flex-col text-white w-full lg:w-[522px] text-center lg:text-left items-center lg:items-start"
+          style={{ gap: '16px' }}
         >
-          <div className="relative inline-block w-full">
+          <div className="relative inline-block">
             <h3 
-              className="text-[40px] font-medium relative inline-block text-white"
-              style={{ height: '40px', lineHeight: '100%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
+              className="text-[32px] lg:text-[40px] font-medium relative inline-block text-white h-auto lg:h-[40px]"
+              style={{ lineHeight: '100%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
             >
               Our Story
-              
-              {/* Vector Accent Space: Quote mark icon graphic at top-right of 'Story' */}
               <img 
                 src="/images/story-top-accent.svg" 
                 alt="" 
-                className="absolute pointer-events-none object-contain"
+                className="absolute pointer-events-none object-contain hidden lg:block"
                 style={{
                   width: '43.98px',
                   height: '32px',
@@ -136,23 +104,21 @@ export default function AboutUs() {
             </h3>
           </div>
 
-          {/* Core Sub-Description Paragraph */}
           <p 
-            className="text-[16px] font-normal leading-[140%] text-[#E0E0E0]"
-            style={{ width: '522px', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
+            className="text-[16px] font-normal leading-[140%] text-[#E0E0E0] w-full lg:w-[522px]"
+            style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
           >
-            After leading HR and product teams in high-growth companies, we<br />
-            saw the same problems over and over: messy processes, siloed<br />
-            communication, and tools that created more noise than clarity.<br />
-            Tulip was born out of the belief that hiring is both a science and an art,<br />
-            and that technology should support human judgment, not replace it.<br />
-            We're building the platform we always wanted: one that's simple,<br />
+            After leading HR and product teams in high-growth companies, we<br className="hidden lg:block" />
+            saw the same problems over and over: messy processes, siloed<br className="hidden lg:block" />
+            communication, and tools that created more noise than clarity.<br className="hidden lg:block" />
+            Tulip was born out of the belief that hiring is both a science and an art,<br className="hidden lg:block" />
+            and that technology should support human judgment, not replace it.<br className="hidden lg:block" />
+            We're building the platform we always wanted: one that's simple,<br className="hidden lg:block" />
             powerful, and designed to make great hiring easier.
           </p>
         </div>
 
-        {/* Right Side: Showcase Photo Grid Image Frame Layer */}
-        <div style={{ width: '630px', height: '405px' }}>
+        <div className="w-full max-w-[630px] lg:w-[630px] h-auto lg:h-[405px]">
           <img 
             src="/images/about-showcase-grid.svg" 
             alt="Tulip Team Story Showcase" 
