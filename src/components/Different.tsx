@@ -3,7 +3,7 @@ import React from 'react';
 export default function Different() {
   return (
     <section 
-      className="relative w-full max-w-[1440px] bg-transparent flex flex-col mx-auto overflow-hidden mt-20 lg:mt-[120px]"
+      className="relative w-full max-w-[1700px] bg-transparent flex flex-col mx-auto overflow-hidden mt-20 lg:mt-[120px]"
       style={{ minHeight: '718px' }}
     >
       <img 
@@ -29,7 +29,7 @@ export default function Different() {
         className="relative z-20 flex flex-col lg:flex-row justify-between items-center flex-shrink-0 w-full lg:w-[1172px] mt-16 lg:mt-[127px] ml-0 lg:ml-[188px] px-6 lg:px-0 gap-12 lg:gap-0 mx-auto lg:mx-0"
       >
         <div 
-          className="relative flex flex-col text-white flex-shrink-0 w-full lg:w-[522px] text-center lg:text-left items-center lg:items-start"
+          className="relative flex flex-col text-white flex-shrink-0 w-full lg:w-[522px] text-left items-start"
           style={{ gap: '16px' }}
         >
           {/* Main Headline with Highlight Vector Space under 'Different' */}

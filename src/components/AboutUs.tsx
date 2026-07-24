@@ -3,7 +3,7 @@ import React from 'react';
 export default function AboutUs() {
   return (
     <section 
-      className="relative w-full max-w-[1440px] bg-transparent flex flex-col mx-auto overflow-hidden mt-20 lg:mt-[120px] px-6 lg:px-0"
+      className="relative w-full max-w-[1700px] bg-transparent flex flex-col mx-auto overflow-hidden mt-20 lg:mt-[120px] px-6 lg:px-0"
       style={{ minHeight: '1020px' }}
     >
       <img 
@@ -26,11 +26,11 @@ export default function AboutUs() {
       />
 
       <div 
-        className="relative flex flex-col items-center z-20 self-center flex-shrink-0 w-full lg:w-[846px] mt-12 lg:mt-[162px]"
+        className="relative flex flex-col items-start lg:items-center z-20 lg:self-center flex-shrink-0 w-full lg:w-[846px] mt-12 lg:mt-[162px]"
         style={{ gap: '40px' }}
       >
         <div 
-          className="flex items-center justify-center font-medium text-xs text-[#E0E0E0]"
+          className="hidden lg:flex items-center justify-center font-medium text-xs text-[#E0E0E0]"
           style={{
             width: '132px',
             height: '32px',
@@ -42,7 +42,7 @@ export default function AboutUs() {
           About Us
         </div>
 
-        <div className="relative w-full text-center">
+        <div className="relative w-full text-left lg:text-center">
           <img 
             src="/images/system-top-accent.svg" 
             alt="" 
@@ -65,11 +65,8 @@ export default function AboutUs() {
               <img 
                 src="/images/wished-bottom-accent.svg" 
                 alt="" 
-                className="absolute pointer-events-none object-contain"
+                className="absolute pointer-events-none object-contain bottom-[-12px] lg:bottom-[-6px] w-[75px] lg:w-[100px] h-[12px] lg:h-[16px]"
                 style={{
-                  width: '100px',
-                  height: '16px',
-                  bottom: '-6px',
                   left: '-3px'  
                 }}
               />
@@ -81,7 +78,7 @@ export default function AboutUs() {
         className="relative flex flex-col lg:flex-row items-center justify-between z-20 flex-shrink-0 w-full lg:w-[1172px] mt-16 lg:mt-[90px] ml-0 lg:ml-[188px] gap-12 lg:gap-0 mx-auto lg:mx-0"
       >
         <div 
-          className="flex flex-col text-white w-full lg:w-[522px] text-center lg:text-left items-center lg:items-start"
+          className="flex flex-col text-white w-full lg:w-[522px] text-left items-start"
           style={{ gap: '16px' }}
         >
           <div className="relative inline-block">

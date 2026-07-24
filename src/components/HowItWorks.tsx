@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HowItWorks() {
   return (
-    <section className="relative w-full max-w-[1440px] bg-transparent mx-auto mt-[120px] flex justify-center px-6 lg:px-0" style={{ minHeight: '784px' }}>
+    <section className="relative w-full max-w-[1700px] bg-transparent mx-auto mt-[120px] flex justify-start lg:justify-center px-6 lg:px-0" style={{ minHeight: '784px' }}>
       <div 
         className="relative flex flex-col flex-shrink-0 w-full lg:w-[1104px]"
         style={{ gap: '64px' }}
@@ -12,6 +12,7 @@ export default function HowItWorks() {
           style={{ gap: '24px' }}
         >
           <div
+            className="hidden lg:flex items-center justify-center"
             style={{
               width: '132px',
               height: '32px',
@@ -19,9 +20,6 @@ export default function HowItWorks() {
               border: '1px solid #9B7AF5',
               backgroundColor: '#9B7AF51F',
               padding: '8px 16px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               gap: '10px',
             }}
           >
@@ -40,7 +38,7 @@ export default function HowItWorks() {
             </span>
           </div>
 
-          <div className="relative w-full text-center mt-2">
+          <div className="relative w-full text-left lg:text-center mt-2">
             <h2 
               className="text-[32px] lg:text-[40px] font-medium text-[#29282A] tracking-normal w-full lg:w-[1104px] h-auto lg:h-[40px] mx-auto"
               style={{ lineHeight: '100%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
@@ -51,11 +49,8 @@ export default function HowItWorks() {
                 <img 
                   src="/images/without-chaos-accent.svg" 
                   alt="" 
-                  className="absolute pointer-events-none object-contain max-w-none"
+                  className="absolute pointer-events-none object-contain max-w-none bottom-[-14px] lg:bottom-[-12px] w-[110px] lg:w-[149px] h-[12px] lg:h-[16px]"
                   style={{
-                    width: '149px',
-                    height: '16px',
-                    bottom: '-12px',
                     left: '50%',
                     transform: 'translateX(-50%)'
                   }}
@@ -68,52 +63,49 @@ export default function HowItWorks() {
           <div 
             className="flex flex-col lg:flex-row items-center lg:items-start w-full lg:w-[1104px] mt-8 lg:mt-8 h-auto lg:h-[140px] gap-12 lg:gap-6"
           >
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left w-full lg:w-[352px] h-auto lg:h-[140px]" style={{ gap: '20px' }}>
+            <div className="flex flex-row items-start text-left w-full lg:w-[352px] h-auto lg:h-[140px]" style={{ gap: '20px' }}>
               <img 
                 src="/images/step-number-1.svg" 
                 alt="1" 
-                className="object-contain flex-shrink-0" 
-                style={{ width: '58px', height: '104px' }} 
+                className="object-contain flex-shrink-0 w-[29px] lg:w-[58px] h-[52px] lg:h-[104px]" 
               />
               <div className="flex flex-col justify-center w-full lg:w-[271px]">
                 <h3 className="text-[20px] font-semibold text-[#29282A] mb-2 leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
                   Create Roles with Clarity<br className="hidden lg:block" />and Context
                 </h3>
-                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+                <p className="text-[16px] lg:text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
                   Our AI-enhanced customizable<br className="hidden lg:block" />templates help define roles with real<br className="hidden lg:block" />substance cutting down on revisions<br className="hidden lg:block" />and rework later.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left w-full lg:w-[352px] h-auto lg:h-[140px]" style={{ gap: '20px' }}>
+            <div className="flex flex-row items-start text-left w-full lg:w-[352px] h-auto lg:h-[140px]" style={{ gap: '20px' }}>
               <img 
                 src="/images/step-number-2.svg" 
                 alt="2" 
-                className="object-contain flex-shrink-0" 
-                style={{ width: '76px', height: '128px' }} 
+                className="object-contain flex-shrink-0 w-[38px] lg:w-[76px] h-[64px] lg:h-[128px]" 
               />
               <div className="flex flex-col justify-center w-full lg:w-[245px]">
                 <h3 className="text-[20px] font-semibold text-[#29282A] mb-2 leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
                   Run Interviews That Flow<br className="hidden lg:block" />Naturally
                 </h3>
-                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+                <p className="text-[16px] lg:text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
                   Tulip builds structured interview<br className="hidden lg:block" />plans and intelligently nudges<br className="hidden lg:block" />your team to keep the process<br className="hidden lg:block" />moving.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left w-full lg:w-[352px] h-auto lg:h-[140px]" style={{ gap: '20px' }}>
+            <div className="flex flex-row items-start text-left w-full lg:w-[352px] h-auto lg:h-[140px]" style={{ gap: '20px' }}>
               <img 
                 src="/images/step-number-3.svg" 
                 alt="3" 
-                className="object-contain flex-shrink-0" 
-                style={{ width: '76px', height: '128px' }} 
+                className="object-contain flex-shrink-0 w-[38px] lg:w-[76px] h-[64px] lg:h-[128px]" 
               />
               <div className="flex flex-col justify-center w-full lg:w-[245px]">
                 <h3 className="text-[20px] font-semibold text-[#29282A] mb-2 leading-[120%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
                   Make Decisions with<br className="hidden lg:block" />Confidence
                 </h3>
-                <p className="text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
+                <p className="text-[16px] lg:text-[14px] font-normal text-[#555358] leading-[140%]" style={{ fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}>
                   Candidate feedback is organized,<br className="hidden lg:block" />structured, and summarized so<br className="hidden lg:block" />you can trust your signals, not<br className="hidden lg:block" />your gut alone.
                 </p>
               </div>
@@ -125,7 +117,7 @@ export default function HowItWorks() {
           className="flex flex-col lg:flex-row items-center justify-between w-full lg:w-[1064px] h-auto lg:h-[428px] mt-8 lg:mt-[32px] gap-12 lg:gap-0 mx-auto"
         >
           <div 
-            className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-[522px] h-auto lg:h-[94px]"
+            className="flex flex-col justify-center items-start text-left w-full lg:w-[522px] h-auto lg:h-[94px]"
             style={{ gap: '16px' }}
           >
             <div className="relative inline-block">

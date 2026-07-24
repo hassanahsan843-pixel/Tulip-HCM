@@ -21,4 +21,5 @@ a {
 /* Ensure body text never inherits an unexpected colour */
 body {
   color: #29282A;
+  overflow-x: hidden;
 }

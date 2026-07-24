@@ -62,7 +62,7 @@ export default function Capabilities() {
   const [hoveredCard, setHoveredCard] = React.useState<number | null>(null);
 
   return (
-    <section className="relative w-full max-w-[1440px] bg-transparent flex flex-col items-center mx-auto mt-20 lg:mt-[250px] px-6 lg:px-0" style={{ minHeight: '720px', overflow: 'visible' }}>
+    <section className="relative w-full max-w-[1700px] bg-transparent flex flex-col items-start lg:items-center mx-auto mt-20 lg:mt-[250px] px-6 lg:px-0" style={{ minHeight: '720px', overflow: 'visible' }}>
       <img
         src="/images/capabilities-right-ellipse.svg"
         alt=""
@@ -81,6 +81,7 @@ export default function Capabilities() {
         style={{ gap: '16px' }}
       >
         <div
+          className="hidden lg:flex items-center justify-center"
           style={{
             width: '148px',
             height: '32px',
@@ -88,9 +89,6 @@ export default function Capabilities() {
             border: '1px solid #F87315',
             backgroundColor: '#F873151F',
             padding: '8px 16px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             gap: '10px',
           }}
         >
@@ -108,7 +106,7 @@ export default function Capabilities() {
           </span>
         </div>
 
-        <div className="relative w-full text-center">
+        <div className="relative w-full text-left lg:text-center">
           <img
             src="/images/people-top-accent.svg"
             alt=""
@@ -131,11 +129,8 @@ export default function Capabilities() {
               <img
                 src="/images/decisions-bottom-accent.svg"
                 alt=""
-                className="absolute pointer-events-none object-contain"
+                className="absolute pointer-events-none object-contain bottom-[-16px] lg:bottom-[-14px] w-[160px] lg:w-[220px] h-[20px] lg:h-[28px]"
                 style={{
-                  width: '220px',
-                  height: '28px',
-                  bottom: '-14px',
                   left: '46%',
                   transform: 'translateX(-50%)',
                 }}
@@ -145,7 +140,7 @@ export default function Capabilities() {
         </div>
 
         <p
-          className="text-[16px] font-normal text-[#555358] text-center w-full"
+          className="text-[16px] font-normal text-[#555358] text-left lg:text-center w-full"
           style={{ lineHeight: '140%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
         >
           Tulip blends AI and human intelligence to streamline the hiring process, without sacrificing clarity or control. From<br className="hidden lg:block" />
@@ -190,7 +185,7 @@ export default function Capabilities() {
 
             <div className="flex flex-col justify-between w-full lg:w-[304px] h-auto lg:h-[112px] relative z-10">
               <h3 className="text-base font-bold text-[#29282A]">{card.label}</h3>
-              <p className="text-xs font-medium text-[#555358] leading-[140%]">{card.descJsx}</p>
+              <p className="text-[14px] lg:text-xs font-medium text-[#555358] leading-[140%]">{card.descJsx}</p>
             </div>
           </div>
         ))}

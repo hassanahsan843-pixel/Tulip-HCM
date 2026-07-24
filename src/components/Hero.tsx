@@ -2,15 +2,11 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section 
-      className="relative w-full max-w-[1440px] mx-auto min-h-[660px] bg-transparent flex flex-col lg:flex-row justify-between items-start px-6 lg:pl-[188px] lg:pr-[90px] pt-12 lg:pt-[175.43px] gap-12 lg:gap-0"
-    >
-      
-      <div 
-        className="relative z-10 flex flex-col flex-shrink-0 w-full lg:min-w-[630px] lg:w-[630px] lg:mt-[67.57px]"
-        style={{ gap: '24px' }}
-      >
-        <div className="relative w-full">
+    <div className="max-w-[1800px] mx-auto w-full">
+      <section className="mt-[45px] flex flex-col xl:flex-row justify-evenly items-center w-full min-h-[660px]">
+        
+        <div className="flex flex-col items-start w-full md:max-w-[630px] px-5 lg:px-0 xl:ms-[170px] xl:me-0 gap-4 2xl:ms-[120px]">
+          <div className="relative w-full">
           <h1 
             className="text-[40px] lg:text-[56px] text-[#29282A] w-full"
             style={{ lineHeight: '120%', fontFamily: 'ES Rebond Grotesque TRIAL, sans-serif' }}
@@ -21,7 +17,7 @@ export default function Hero() {
               <img 
                 src="/images/fast-top-accent.svg" 
                 alt="" 
-                className="absolute pointer-events-none z-20 object-contain"
+                className="absolute pointer-events-none z-20 object-contain hidden lg:block" 
                 style={{
                   width: '50px',
                   height: '40px',
@@ -53,11 +49,8 @@ export default function Hero() {
                 <img 
                   src="/images/customizable-bottom-accent.svg" 
                   alt="" 
-                  className="absolute pointer-events-none z-20 object-contain"
+                  className="absolute pointer-events-none z-20 object-contain bottom-[-16px] lg:bottom-[-8px] w-[160px] lg:w-[220px] h-[14px] lg:h-[20px]"
                   style={{
-                    width: '220px',
-                    height: '20px',
-                    bottom: '-8px',
                     right: '0',
                     transform: 'rotate(-360deg)'
                   }}
@@ -119,16 +112,15 @@ export default function Hero() {
         </div>
       </div>
 
-      <div 
-        className="relative z-10 flex-shrink-0 w-full lg:w-[512px] h-auto lg:h-[521.21px] flex justify-center mt-8 lg:mt-0"
-      >
-        <img 
-          src="/images/hero-illustration-group.svg" 
-          alt="Tulip ATS Overview Illustration" 
-          className="w-full max-w-[400px] lg:max-w-none lg:w-full lg:h-full object-contain"
-        />
-      </div>
+        <div className="w-full h-full max-w-[600px] max-h-[500px] px-5 md:px-0 mt-8 xl:mt-0">
+          <img 
+            src="/images/hero-illustration-group.svg" 
+            alt="Tulip ATS Overview Illustration" 
+            className="w-full h-full object-contain md:mt-[-57px]"
+          />
+        </div>
 
-    </section>
+      </section>
+    </div>
   );
 }
